@@ -6,6 +6,7 @@
 package Controller;
 
 import User.Customer;
+import java.util.Scanner;
 
 /**
  *
@@ -20,7 +21,24 @@ public class userLoginCmd implements Command {
 
     @Override
     public void execute() {
-        user.login(user.getName(),user.getPassword());
+        //just for now trying scanner for console
+        Scanner scanner = new Scanner(System.in);
+        
+        //Asking to enter user name and initialize name string
+        System.out.println("Enter Username Please : ");
+        String name = scanner.next();
+        
+        //Asking to enter password and initialize password string
+        System.out.println("Enter Password Please : ");
+        String password = scanner.next();
+        
+        //calling method login from user class
+        if(user.login(name, password))
+        {
+         System.out.println("Login Successful !");
+        }
+        else
+         System.out.println("Unsuccessfull Login !");   
     }
 
     @Override

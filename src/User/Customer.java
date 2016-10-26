@@ -62,6 +62,7 @@ public class Customer
     public boolean login(String uName, String password)
     {
         //getting result from database
+        logInStatus = true;
       return da.login(uName, password);
     }
     
@@ -74,6 +75,7 @@ public class Customer
         //customerID = "";
         name = "";
         password = "";
+        logInStatus = false;
         return true;
        }
        else
