@@ -22,17 +22,14 @@ public class DataBaseAccess
     //checking database user is valid or not by supplying customerID
     public boolean isUser(String customerId)
     {
-     if(customerId.equals("u1"))
-     {
-      return true;
-     }
-     else
-         return false;
+        return customerId.equals("u1");
     }
     
     //getting customerID by name in database
     public String getCustomerID(String name)
     {
-     return "u1";
+     if(name.equals("ankit"))
+     {  return "u1";}
+     else return "Error";
     }
 }

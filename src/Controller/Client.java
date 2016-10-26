@@ -18,10 +18,12 @@ public class Client {
         // TODO code application logic here
         Customer abcCustomer = new Customer();
         
-        userLoginCmd loginCommand = new userLoginCmd(abcCustomer);
+        UserLoginCmd loginCommand = new UserLoginCmd(abcCustomer);
+        UserLogoutCmd logoutCommand = new UserLogoutCmd(abcCustomer); 
         
         Broker agent = new Broker();
         agent.takeCommand(loginCommand);
+        agent.takeCommand(logoutCommand);
         agent.placeCommand();
         
         System.exit(0);

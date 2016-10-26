@@ -12,8 +12,8 @@ import DataBase.DataBaseAccess;
 public class Customer 
 {
     //creating a database object
-    private DataBaseAccess da = new DataBaseAccess();
-    //private String customerID;
+    private DataBaseAccess da;
+    private String customerID;
     //name attribute
     private String name;
     //password attribute
@@ -28,10 +28,15 @@ public class Customer
     }
 
     //getter method for customerID
-    public String getCustomerID(String name)
+    public String getCustomerID()
     {
-      return da.getCustomerID(name);
+      return name; 
     }
+    
+    //Setter for customerID
+  /*  public void setCustomerID(String name) {
+        this.name = name;
+    }*/
     
     //Setter for name
     public void setName(String name) {
@@ -61,24 +66,28 @@ public class Customer
     //method to login user,  username and password are the parameter
     public boolean login()
     {
+        da = new DataBaseAccess();
+        
         //getting result from database
         logInStatus = true;
-        
+        customerID = da.getCustomerID(name);
         //System.out.println("Customer-> Login, name: "+ name + " password: "+ password);
         return da.login(name, password);
         //return true;
     }
     
     //method to logout user
-    public boolean logout(String customerId)
+    public boolean logout()
     {
+       da = new DataBaseAccess(); 
         //check if user is valid
-       if(da.isUser(customerId))
+       if(da.isUser(customerID))
        {
-        //customerID = "";
+        customerID = "";
         name = "";
         password = "";
         logInStatus = false;
+        System.out.println("Logout Successfully..");
         return true;
        }
        else
