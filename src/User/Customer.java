@@ -12,7 +12,7 @@ import DataBase.DataBaseAccess;
 public class Customer 
 {
     //creating a database object
-    private DataBaseAccess da;
+    private DataBaseAccess da = new DataBaseAccess();
     //private String customerID;
     //name attribute
     private String name;
@@ -59,11 +59,14 @@ public class Customer
     }
     
     //method to login user,  username and password are the parameter
-    public boolean login(String uName, String password)
+    public boolean login()
     {
         //getting result from database
         logInStatus = true;
-      return da.login(uName, password);
+        
+        //System.out.println("Customer-> Login, name: "+ name + " password: "+ password);
+        return da.login(name, password);
+        //return true;
     }
     
     //method to logout user

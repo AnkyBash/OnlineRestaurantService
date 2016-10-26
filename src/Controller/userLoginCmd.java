@@ -26,14 +26,16 @@ public class userLoginCmd implements Command {
         
         //Asking to enter user name and initialize name string
         System.out.println("Enter Username Please : ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
+        user.setName(name);
         
         //Asking to enter password and initialize password string
         System.out.println("Enter Password Please : ");
-        String password = scanner.next();
+        String password = scanner.nextLine();
+        user.setPassword(password);
         
         //calling method login from user class
-        if(user.login(name, password))
+        if(user.login())
         {
          System.out.println("Login Successful !");
         }

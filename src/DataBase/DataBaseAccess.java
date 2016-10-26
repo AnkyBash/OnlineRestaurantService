@@ -15,14 +15,8 @@ public class DataBaseAccess
     public boolean login(String uName, String password)
     {
         //hardcode username and password
-      if(uName.equals("ankit") && password.equals("ankit"))
-      {
-          return true;
-      }
-      else
-      {
-           return false;
-      }
+        //return true;
+        return uName.equals("ankit") && password.equals("ankit");
     }
     
     //checking database user is valid or not by supplying customerID
