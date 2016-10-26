@@ -5,11 +5,19 @@
  */
 package Controller;
 
+import Restaurant.Restaurant;
+import java.util.ArrayList;
+
 /**
  *
  * @author Jo
  */
 public class getRestaurantListCmd implements Command {
+    ArrayList <Restaurant> RestaurantList;
+    
+    public getRestaurantListCmd() {
+        RestaurantList = new ArrayList();
+    }
 
     @Override
     public void execute() {

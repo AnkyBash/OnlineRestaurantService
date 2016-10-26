@@ -5,11 +5,14 @@
  */
 package Controller;
 
+import Restaurant.Restaurant;
+
 /**
  *
  * @author Jo
  */
 public class chooseRestaurandCmd implements Command {
+    Restaurant restaurant;
 
     @Override
     public void execute() {

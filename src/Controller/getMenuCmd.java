@@ -5,11 +5,18 @@
  */
 package Controller;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jo
  */
 public class getMenuCmd implements Command {
+    /*ArrayList<Dish> Menu;
+    
+    public getMenuCmd() {
+        Menu = new ArrayList();
+    }*/
 
     @Override
     public void execute() {
