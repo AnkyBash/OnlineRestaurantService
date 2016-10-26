@@ -11,9 +11,10 @@ package DataBase;
  */
 public class DataBaseAccess 
 {
- 
+    //checking database to verify username and password
     public boolean login(String uName, String password)
     {
+        //hardcode username and password
       if(uName.equals("ankit") && password.equals("ankit"))
       {
           return true;
@@ -24,6 +25,7 @@ public class DataBaseAccess
       }
     }
     
+    //checking database user is valid or not by supplying customerID
     public boolean isUser(String customerId)
     {
      if(customerId.equals("u1"))
@@ -34,6 +36,7 @@ public class DataBaseAccess
          return false;
     }
     
+    //getting customerID by name in database
     public String getCustomerID(String name)
     {
      return "u1";
