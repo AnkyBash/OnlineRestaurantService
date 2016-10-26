@@ -5,20 +5,28 @@
  */
 package Controller;
 
+import User.Customer;
+
 /**
  *
  * @author Jo
  */
 public class userLogoutCmd implements Command {
+    
+    Customer user;
+    
+    public userLogoutCmd(Customer customer) {
+        this.user = customer;
+    }
 
     @Override
     public void execute() {
-        
+        user.logout(user.getCustomerID(user.getName()));
     }
 
     @Override
     public void undo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("There is no undo for the logout."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
