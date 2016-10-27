@@ -5,22 +5,20 @@
  */
 package Bill;
 
-import Restaurant.Restaurant;
-
 /**
  *
  * @author Ih
  */
-public class RestaurantName extends BillDecorator {
+public class DishList extends BillDecorator {
+    // prints a string of the dishes in the order
     
-    private Restaurant aName;
-    
-    public RestaurantName(BillInterface newBill) {
+    public DishList(BillInterface newBill) {
         super(newBill);
     }
-    
+      
     @Override
     public String getBill(){
-        return tempBill.getBill() + restaurantName + "\n";
-    } 
+        return " Dish 1";
+    }   
+    
 }

@@ -15,9 +15,9 @@ public class OrderTesting {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Order observes OderList (has a list of all dishes of the order);
         
-        //OrderList orderList = new OrderList();
+        BillInterface bill = new Taxes(new TotalPrice( new RestaurantName ( new Bill())));
+        System.out.println(bill.getBill());
     }
     
 }

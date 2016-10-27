@@ -6,24 +6,45 @@
 package Organisation;
 
 import Bill.Observer;
+import Restaurant.Dish;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
- * @author ankit
+ * @author Jo
  */
-public class Order implements Observer {
+public class Order implements Subject {
 
-    Subject observerSubject;
+    private List<Observer> observers = new ArrayList<Observer>();
+    private List<Dish> dishList = new ArrayList<Dish>();
     
     @Override
-    public void update() {
-        System.out.println("The Order has been updated: Show list of dishes");
+    public void addDishToOrder(Dish dishToAdd) {
+        dishList.add(dishToAdd);
+        notifyObservers();
     }
     
-
     @Override
-    public void setSubject(Subject sub) {
-        observerSubject = sub;
-        observerSubject.register(this);
+    public List<Dish> getDishList() {
+        return dishList;
     }
+    
+    @Override
+    public void register(Observer obs) {
+        observers.add(obs);
+    }
+    
+    @Override
+    public void unregister(Observer obs) {
+        observers.remove(obs);
+    }
+    
+    @Override
+    public void notifyObservers() {
+        for (Observer obs : observers) {
+            obs.update();
+        }
+    }
+    
 }

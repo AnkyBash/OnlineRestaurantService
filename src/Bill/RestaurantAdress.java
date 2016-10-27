@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package Bill;
-import Restaurant.Restaurant;
+
 /**
  *
  * @author Ih
  */
+
 public class RestaurantAdress extends BillDecorator {
 
     public RestaurantAdress(BillInterface newBill) {
@@ -17,7 +18,7 @@ public class RestaurantAdress extends BillDecorator {
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + "Adress";
+        return tempBill.getBill() + restaurantAdress + "\n";
     }  
 }
  

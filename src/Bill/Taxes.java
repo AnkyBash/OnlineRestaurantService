@@ -5,13 +5,12 @@
  */
 package Bill;
 
-import java.util.*;
 /**
  *
  * @author Ih
  */
 public class Taxes extends BillDecorator{
-
+    private double tax = 0.2;
     
     public Taxes(BillInterface newBill) {
         super(newBill);
@@ -19,7 +18,7 @@ public class Taxes extends BillDecorator{
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + " \n Taxes are: ";
+        return tempBill.getBill() + price*tax+ "\n";
                 
     }   
  

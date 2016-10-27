@@ -5,21 +5,11 @@
  */
 package Bill;
 
-import Organisation.Order;
-
-
 /**
  *
  * @author Ih
  */
 public class Bill implements BillInterface {
-    Order order;
-    double price;
-   
-    public Bill (Order o){
-        order = o; 
-    }
-  
   
     @Override
     public String getBill(){
