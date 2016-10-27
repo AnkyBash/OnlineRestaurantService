@@ -27,10 +27,7 @@ public class Client {
         agent.placeCommand();
         
         System.exit(0);
-       // org.takeOrder(addItem);
-       // org.takeOrder(addItem);
-       // org.takeOrder(removeItem);
-       // org.placeOrder();
+       
     }
     
 }
