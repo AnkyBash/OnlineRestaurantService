@@ -10,5 +10,5 @@ package Restaurant;
  * @author Ih
  */
 public enum DishType {
-    FOOD, DESSERT, ALCDRINK, SOFTDRINK
+     DRINK, FOOD, DESSERT, FOOD_VEGAN, DESSERT_VEGAN, FOOD_VEGETERIAN
 }

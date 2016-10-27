@@ -12,8 +12,8 @@ package Restaurant;
 public class Food extends Dish{
     
     
-    public Food(String name, double price){
-        super(name, price);
+    public Food(String name, double price, NutritionForm nutritionForm){
+        super(name, price, nutritionForm);
         System.out.println("Created new Main Course: "+name+" "+price);
     }
     

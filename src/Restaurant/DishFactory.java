@@ -29,17 +29,23 @@ public class DishFactory {
         //TODO: constructors which make sense
         switch (dishType) {
             case FOOD:
-                return new Food(name, price);
+                return new Food(name, price, new Regular());
                      
             case DESSERT:
-                return new Dessert(name, price);
-                         
-            case ALCDRINK:
-                return new Drink(name, price, true);
-                
-            case SOFTDRINK:
-                return new Drink(name, price, false);
-                
+                return new Dessert(name, price, new Regular());
+                               
+            case DRINK:
+                return new Drink(name, price, new Regular());
+            
+            case FOOD_VEGAN:
+                return new Food(name, price, new Vegan());
+                     
+            case DESSERT_VEGAN:
+                return new Dessert(name, price, new Vegan());
+            
+            case FOOD_VEGETERIAN:
+                return new Food(name, price, new Vegeterian());
+
             default:
                 System.err.println("Wrong use of Dish Factory!"); return null;
         }

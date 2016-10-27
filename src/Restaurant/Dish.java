@@ -12,10 +12,12 @@ package Restaurant;
 public abstract class Dish {
     protected String dishName;
     protected double dishPrice;
+    protected NutritionForm nutritionForm;
     
-    public Dish(String n, double p){
+    public Dish(String n, double p, NutritionForm nF){
       dishName = n;
       dishPrice = p;
+      nutritionForm = nF;
     }
     
     public String getDishName() {
@@ -32,6 +34,10 @@ public abstract class Dish {
 
     public void setDishPrice(double dishPrice) {
         this.dishPrice = dishPrice;
+    }
+    
+    public void getSuitability(){
+        nutritionForm.suitableFor();
     }
     
 }

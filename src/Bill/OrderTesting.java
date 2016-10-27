@@ -38,11 +38,17 @@ public class OrderTesting {
         // create Dish Factory:
         DishFactory dishFactory = DishFactory.getInstance();
         Dish aDessert = dishFactory.makeDish(DishType.DESSERT, "Kuchen", 2.99);
-        Dish aDrink = dishFactory.makeDish(DishType.ALCDRINK, "Bahama Mama", 6.99);
+        Dish aDrink = dishFactory.makeDish(DishType.DRINK, "Bahama Mama", 6.99);
+        Dish aFood = dishFactory.makeDish(DishType.FOOD_VEGAN, "Sojasprossen", 13.99);
+
+        aDessert.getSuitability();
+        aFood.getSuitability();
+
         
         // choose the dish
         order.addDishToOrder(aDessert);
         order.addDishToOrder(aDrink);
+        order.addDishToOrder(aFood);
         
         // Decorator Pattern        
         System.out.println(bill.getBill());

@@ -12,12 +12,8 @@ package Restaurant;
 public class Drink extends Dish {
     private boolean alcoholic;
     
-     public Drink(String name, double price, boolean alc){
-        super(name, price);
-        
-        alcoholic = alc;
-        
-        if (alcoholic) System.out.println("Created new alcoholic Drink: "+name+" "+price);
-        else System.out.println("Created new nonaloholic Drink: "+name+" "+price);
+     public Drink(String name, double price, NutritionForm nutritionForm){
+        super(name, price, nutritionForm);
+        System.out.println("Created new Drink: "+name+" "+price);
     }
 }
