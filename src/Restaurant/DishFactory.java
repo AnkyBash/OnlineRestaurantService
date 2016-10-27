@@ -15,9 +15,13 @@ public class DishFactory {
     private static DishFactory INSTANCE = null;
     private DishFactory(){}
     
-    public DishFactory getInstance() {
-	if (INSTANCE == null)
+    public static DishFactory getInstance() {
+	if (INSTANCE == null) {
+            System.out.println("Created Dish Factory");
             INSTANCE = new DishFactory();
+        } else 
+            System.out.println("Dish Factory already exists!");
+        
 	return INSTANCE;
     }
         
@@ -31,13 +35,13 @@ public class DishFactory {
                 return new Dessert(name, price);
                          
             case ALCDRINK:
-                return new Drink(name, price);
+                return new Drink(name, price, true);
                 
             case SOFTDRINK:
-                return new Drink(name, price);
+                return new Drink(name, price, false);
                 
             default:
-               throw new UnsupportedOperationException("Not supported yet.");
+                System.err.println("Wrong use of Dish Factory!"); return null;
         }
     }
 }

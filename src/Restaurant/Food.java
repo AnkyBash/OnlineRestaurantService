@@ -14,6 +14,7 @@ public class Food extends Dish{
     
     public Food(String name, double price){
         super(name, price);
+        System.out.println("Created new Main Course: "+name+" "+price);
     }
     
 }

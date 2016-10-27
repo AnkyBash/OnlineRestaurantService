@@ -12,8 +12,6 @@ package Bill;
  */
 public class TotalPrice extends BillDecorator{
     
-    private Bill aBill;
-    private double dishPrice;
     public TotalPrice(BillInterface newBill) {
         super(newBill);
     }
