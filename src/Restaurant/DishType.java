@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bill;
+package Restaurant;
 
 /**
  *
  * @author Ih
  */
-public class Bill implements BillInterface {
-  
-    @Override
-    public String getBill(){
-        return "This is your Bill:\n\n";
-    }
-
-    
+public enum DishType {
+    FOOD, DESSERT, ALCDRINK, SOFTDRINK
 }

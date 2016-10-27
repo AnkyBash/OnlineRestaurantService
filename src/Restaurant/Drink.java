@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bill;
+package Restaurant;
 
 /**
  *
  * @author Ih
  */
-public class Bill implements BillInterface {
-  
-    @Override
-    public String getBill(){
-        return "This is your Bill:\n\n";
-    }
-
+public class Drink extends Dish {
+    private boolean alcoholic;
     
+     public Drink(String name, double price){
+        super(name, price);
+    }
 }

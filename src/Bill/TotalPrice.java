@@ -5,8 +5,6 @@
  */
 package Bill;
 
-//import Restaurant.Dish;
-import java.util.*;
 
 /**
  *
@@ -22,7 +20,7 @@ public class TotalPrice extends BillDecorator{
    
     @Override
     public String getBill(){
-        return tempBill.getBill() + "\n Total Price";
+        return tempBill.getBill() + price + "\n ______________________________ \n";
       
     }   
 }

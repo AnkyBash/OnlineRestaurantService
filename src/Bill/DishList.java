@@ -5,21 +5,20 @@
  */
 package Bill;
 
-import java.util.ArrayList;
 /**
  *
  * @author Ih
  */
-public class OrderList extends BillDecorator {
-
+public class DishList extends BillDecorator {
+    // prints a string of the dishes in the order
     
-    public OrderList(BillInterface newBill) {
+    public DishList(BillInterface newBill) {
         super(newBill);
     }
-    
       
     @Override
     public String getBill(){
         return " Dish 1";
     }   
+    
 }
