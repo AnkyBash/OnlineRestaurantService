@@ -5,10 +5,25 @@
  */
 package Organisation;
 
+import Bill.Observer;
+
 /**
  *
  * @author ankit
  */
-public class Order {
+public class Order implements Observer {
+
+    Subject observerSubject;
     
+    @Override
+    public void update() {
+        System.out.println("The Order has been updated: Show list of dishes");
+    }
+    
+
+    @Override
+    public void setSubject(Subject sub) {
+        observerSubject = sub;
+        observerSubject.register(this);
+    }
 }

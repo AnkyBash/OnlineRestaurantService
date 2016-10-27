@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Bill;
-
-import Organisation.Subject;
-
+package Restaurant;
 
 /**
  *
  * @author Ih
  */
-public interface Observer {  
-    public void update();
-    public void setSubject(Subject sub);
+public class Food extends Dish{
+    
+    
+    public Food(String name, double price){
+        super(name, price);
+    }
+    
 }
