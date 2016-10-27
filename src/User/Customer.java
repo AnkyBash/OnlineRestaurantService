@@ -87,7 +87,6 @@ public class Customer
         name = "";
         password = "";
         logInStatus = false;
-        System.out.println("Logout Successfully..");
         return true;
        }
        else

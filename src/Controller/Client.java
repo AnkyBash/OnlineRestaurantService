@@ -19,12 +19,12 @@ public class Client {
         Customer abcCustomer = new Customer();
         
         UserLoginCmd loginCommand = new UserLoginCmd(abcCustomer);
-       // UserLogoutCmd logoutCommand = new UserLogoutCmd(abcCustomer); 
+        UserLogoutCmd logoutCommand = new UserLogoutCmd(abcCustomer); 
         
         
         Broker agent = new Broker();
         agent.takeCommand(loginCommand);
-       // agent.takeCommand(logoutCommand);
+        agent.takeCommand(logoutCommand);
         agent.placeCommand();
         
         System.exit(0);
