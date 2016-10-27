@@ -21,6 +21,7 @@ public class Client {
         UserLoginCmd loginCommand = new UserLoginCmd(abcCustomer);
         UserLogoutCmd logoutCommand = new UserLogoutCmd(abcCustomer); 
         
+        
         Broker agent = new Broker();
         agent.takeCommand(loginCommand);
         agent.takeCommand(logoutCommand);
