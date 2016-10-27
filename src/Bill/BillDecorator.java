@@ -5,6 +5,8 @@
  */
 package Bill;
 
+import java.util.List;
+
 /**
  *
  * @author Ih
@@ -12,6 +14,13 @@ package Bill;
 //import java.util.ArrayList;
 
 abstract public class BillDecorator implements BillInterface {
+    double price;
+    List <String> orderedDishes;
+    String restaurantName;
+    String restauranAdress;
+    
+    
+    
     protected BillInterface tempBill;
 
     public BillDecorator(BillInterface newBill){
