@@ -9,10 +9,9 @@ package Controller;
  *
  * @author ankit
  */
-public class AddDishCmd implements Command
+public class ConfirmOrderCmd implements Command
 {
-    
-    public AddDishCmd()
+    public ConfirmOrderCmd()
     {
     
     }
@@ -20,12 +19,12 @@ public class AddDishCmd implements Command
     @Override 
     public void execute()
     {
-      System.out.println("Add Dish Executing");
+      System.out.println("Confirm Order Executing");
     }
     
     @Override
     public void undo()
     {
-     System.out.println("Undo in AddDish Command");
-    }    
+     System.out.println("Undo in Confirm Order Command");
+    }
 }

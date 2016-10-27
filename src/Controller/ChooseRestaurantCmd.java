@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Controller;
-import Organisation.Organisation;
 import Restaurant.Restaurant;
 import java.util.List;
 import java.util.Scanner;
@@ -15,7 +14,6 @@ import java.util.Scanner;
 public class ChooseRestaurantCmd implements Command
 {
     Restaurant restaurant;
-    Organisation org;
     
     public ChooseRestaurantCmd(Restaurant restaurant)
     {
@@ -25,14 +23,12 @@ public class ChooseRestaurantCmd implements Command
     @Override 
     public void execute()
     {
-    /* Scanner scanner = new Scanner(System.in);
-     
-     System.out.print("Please Choose Restaurant(0-n) : ");
-     String selectedRestaurant = scanner.nextLine();
-     
-    */
+      System.out.println("Executing Choose Restaurant Command");
     }
     
     @Override
-    public void undo(){};
+    public void undo()
+    {
+     System.out.println("undo for Choose Restaurant Command");
+    }
 }

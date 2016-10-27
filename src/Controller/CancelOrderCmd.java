@@ -9,6 +9,22 @@ package Controller;
  *
  * @author ankit
  */
-public class CancelOrderCmd {
+public class CancelOrderCmd implements Command 
+{
+    public CancelOrderCmd()
+    {
     
+    }
+    
+    @Override 
+    public void execute()
+    {
+      System.out.println("Cancel Order Executing");
+    }
+    
+    @Override
+    public void undo()
+    {
+     System.out.println("Undo in Cancel Order Command");
+    }    
 }
