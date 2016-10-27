@@ -26,7 +26,7 @@ public class Client {
         agent.takeCommand(loginCommand);
         agent.takeCommand(logoutCommand);
         agent.placeCommand();
-        
+       
         System.exit(0);
        // org.takeOrder(addItem);
        // org.takeOrder(addItem);
