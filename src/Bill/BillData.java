@@ -14,17 +14,17 @@ import java.util.List;
  */
 public class BillData implements Observer {
     double price = 0.0;
-    List <String> orderedDishes;
+    String orderedDishes = "";
     String restaurantName = "No Restaurant Chosen";
     String restaurantAdress = "No Adress Chosen";
     
-    Subject observerSubject;
+    Subject subject;
     
     public double getPrice(){
         return price;
     }
     public String getOrderedDishes(){
-        return "";
+        return orderedDishes;
     }
     public String getRestaurantName(){
         return restaurantName;
@@ -37,11 +37,15 @@ public class BillData implements Observer {
     @Override
     public void update() {
         System.out.println("The Bill has been updated");
+        price = subject.getTotalPrice();
+        orderedDishes = subject.getDishes();
+        restaurantName = subject.getRestaurantName();
+        restaurantAdress = subject.getRestaurantAdress();   
     }
     
     @Override
     public void setSubject(Subject sub) {
-        observerSubject = sub;
-        observerSubject.register(this);
+        subject = sub;
+        subject.register(this);
     }
 }

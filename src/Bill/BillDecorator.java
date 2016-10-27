@@ -14,16 +14,21 @@ import java.util.List;
  */
 //import java.util.ArrayList;
 
-abstract public class BillDecorator implements BillInterface {
+abstract public class BillDecorator implements Bill {
     
-    protected BillInterface tempBill;
+    protected Bill tempBill;
 
-    public BillDecorator(BillInterface newBill){
+    public BillDecorator(Bill newBill){
         tempBill = newBill;
     }
   
     @Override
     public String getBill(){
         return tempBill.getBill();
+    }
+    
+    @Override
+    public BillData getData(){
+        return data;
     }
 }

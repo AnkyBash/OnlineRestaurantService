@@ -5,6 +5,8 @@
  */
 package Bill;
 
+import static jdk.nashorn.internal.objects.NativeMath.round;
+
 /**
  *
  * @author Ih
@@ -12,13 +14,13 @@ package Bill;
 public class Taxes extends BillDecorator{
     private double tax = 0.2;
     
-    public Taxes(BillInterface newBill) {
+    public Taxes(Bill newBill) {
         super(newBill);
     }
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + data.getPrice()*tax+ "\n";       
+        return tempBill.getBill() + "Taxes = " + round((data.getPrice()*tax),2)+ "€\n";       
     }   
  
 }

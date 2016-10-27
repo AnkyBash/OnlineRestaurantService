@@ -29,7 +29,10 @@ public class OrderTesting {
         OrderDisplay orderDisplay = new OrderDisplay();
         orderDisplay.setSubject(order);
         
-
+        Bill bill = new Taxes(new TotalPrice(new DishList(new RestaurantAdress(new RestaurantName ( new BillBasis())))));
+        System.out.println(bill.getBill());
+        BillData billData = bill.getData();
+        billData.setSubject(order);
         
         
         // create Dish Factory:
@@ -39,12 +42,10 @@ public class OrderTesting {
         
         // choose the dish
         order.addDishToOrder(aDessert);
+        order.addDishToOrder(aDrink);
         
-        // Decorator Pattern
-        BillInterface bill = new Taxes(new TotalPrice( new RestaurantName ( new Bill())));
+        // Decorator Pattern        
         System.out.println(bill.getBill());
-       // BillData billData = bill.getBillData();
-       // billData.setSubject(order);
     }
     
 }

@@ -9,14 +9,12 @@ package Bill;
  *
  * @author Ih
  */
-public class Bill implements BillInterface {
-  
-    @Override
-    public String getBill(){
-        return "This is your Bill:\n\n";
-    }
-    public BillData getBillData(){
-        return data;
-    }
-    
+
+//not sure if it should give a String/Textfile back to the GUI or just  print something out
+
+//Blueprint for classes that will have decoraters
+public interface Bill {
+    public String getBill();
+    BillData data = new BillData();
+    public BillData getData();
 }

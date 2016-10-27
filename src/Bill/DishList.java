@@ -12,13 +12,14 @@ package Bill;
 public class DishList extends BillDecorator {
     // prints a string of the dishes in the order
     
-    public DishList(BillInterface newBill) {
+    public DishList(Bill newBill) {
         super(newBill);
     }
       
     @Override
     public String getBill(){
-        return data.getOrderedDishes();
-    }   
+        return tempBill.getBill() + data.getOrderedDishes();
+    }
+    
     
 }

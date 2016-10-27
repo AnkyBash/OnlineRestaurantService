@@ -15,7 +15,7 @@ public class RestaurantName extends BillDecorator {
     
     private Restaurant aName;
     
-    public RestaurantName(BillInterface newBill) {
+    public RestaurantName(Bill newBill) {
         super(newBill);
     }
     
