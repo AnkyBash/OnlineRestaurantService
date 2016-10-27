@@ -29,6 +29,8 @@ public class OrderTesting {
         OrderDisplay orderDisplay = new OrderDisplay();
         orderDisplay.setSubject(order);
         
+
+        
         
         // create Dish Factory:
         DishFactory dishFactory = DishFactory.getInstance();
@@ -41,6 +43,8 @@ public class OrderTesting {
         // Decorator Pattern
         BillInterface bill = new Taxes(new TotalPrice( new RestaurantName ( new Bill())));
         System.out.println(bill.getBill());
+       // BillData billData = bill.getBillData();
+       // billData.setSubject(order);
     }
     
 }

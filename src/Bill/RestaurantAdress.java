@@ -18,7 +18,7 @@ public class RestaurantAdress extends BillDecorator {
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + restaurantAdress + "\n";
+        return tempBill.getBill() + data.getRestaurantAdress() + "\n";
     }  
 }
  

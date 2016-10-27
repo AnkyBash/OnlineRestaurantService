@@ -15,4 +15,5 @@ package Bill;
 //Blueprint for classes that will have decoraters
 public interface BillInterface {
     public String getBill();
+    BillData data = new BillData();
 }

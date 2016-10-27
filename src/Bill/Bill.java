@@ -15,6 +15,8 @@ public class Bill implements BillInterface {
     public String getBill(){
         return "This is your Bill:\n\n";
     }
-
+    public BillData getBillData(){
+        return data;
+    }
     
 }

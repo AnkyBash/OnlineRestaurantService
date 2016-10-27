@@ -18,7 +18,7 @@ public class TotalPrice extends BillDecorator{
    
     @Override
     public String getBill(){
-        return tempBill.getBill() + price + "\n ______________________________ \n";
+        return tempBill.getBill() + data.getPrice() + "\n ______________________________ \n";
       
     }   
 }

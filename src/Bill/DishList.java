@@ -18,7 +18,7 @@ public class DishList extends BillDecorator {
       
     @Override
     public String getBill(){
-        return " Dish 1";
+        return data.getOrderedDishes();
     }   
     
 }

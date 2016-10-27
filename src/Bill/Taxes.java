@@ -18,8 +18,7 @@ public class Taxes extends BillDecorator{
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + price*tax+ "\n";
-                
+        return tempBill.getBill() + data.getPrice()*tax+ "\n";       
     }   
  
 }
