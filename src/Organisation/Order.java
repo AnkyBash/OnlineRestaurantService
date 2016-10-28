@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Jo
  */
-public class Order implements Subject, OrderInterface {
+public class Order implements Subject, OrderInterface, OriginatorMemento {
 
     private List<Observer> observers = new ArrayList<Observer>();
     private List<Dish> dishList = new ArrayList<Dish>();
@@ -59,7 +59,6 @@ public class Order implements Subject, OrderInterface {
     }
     
     
-    
     @Override
     public void addDishToOrder(Dish dishToAdd) {
         dishList.add(dishToAdd);
@@ -86,6 +85,22 @@ public class Order implements Subject, OrderInterface {
         for (Observer obs : observers) {
             obs.update();
         }
+    }
+    
+    
+    // Memento:
+    // getDishList and addDishToOrder implement getState() and setState() of the
+    // Memento Pattern
+    // dishList represents the state
+    
+    @Override
+    public Memento saveListToMomento() {
+        return new Memento(dishList);        
+    }
+    
+    @Override
+    public void restoreListFromMomento(Memento memento) {
+        dishList = memento.getList();
     }
     
 }
