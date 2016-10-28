@@ -12,7 +12,8 @@ package Restaurant;
 public class Drink extends Dish {
     private boolean alcoholic;
     
-     public Drink(String name, double price){
-        super(name, price);
+     public Drink(String name, double price, NutritionForm nutritionForm){
+        super(name, price, nutritionForm);
+        System.out.println("Created new Drink: "+name+" "+price);
     }
 }

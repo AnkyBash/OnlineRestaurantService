@@ -15,12 +15,12 @@ public class RestaurantName extends BillDecorator {
     
     private Restaurant aName;
     
-    public RestaurantName(BillInterface newBill) {
+    public RestaurantName(Bill newBill) {
         super(newBill);
     }
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + restaurantName + "\n";
+        return tempBill.getBill() + data.getRestaurantName() + "\n";
     } 
 }

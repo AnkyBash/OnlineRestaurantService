@@ -6,9 +6,7 @@
 package Organisation;
 
 import Bill.Observer;
-import Restaurant.Dish;
 
-import java.util.List;
 
 
 /**
@@ -16,9 +14,14 @@ import java.util.List;
  * @author Ih
  */
 public interface Subject {
-    public void addDishToOrder(Dish dishToAdd);
-    public List<Dish> getDishList();
+
     public void register(Observer obs);
     public void unregister(Observer obs);
     public void notifyObservers();
+    
+    //Classes to Update the Observer
+    double getTotalPrice();
+    String getRestaurantName();
+    String getRestaurantAdress();
+    String getDishes();
 }

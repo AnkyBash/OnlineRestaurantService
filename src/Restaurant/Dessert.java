@@ -11,7 +11,8 @@ package Restaurant;
  */
 public class Dessert extends Dish{
     
-     public Dessert(String name, double price){
-        super(name, price);
+    Dessert(String name, double price, NutritionForm nutritionForm) {
+        super(name, price, nutritionForm);
+        System.out.println("Created new Dessert: "+name+" "+price);
     }
 }

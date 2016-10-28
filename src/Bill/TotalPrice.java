@@ -12,15 +12,13 @@ package Bill;
  */
 public class TotalPrice extends BillDecorator{
     
-    private Bill aBill;
-    private double dishPrice;
-    public TotalPrice(BillInterface newBill) {
+    public TotalPrice(Bill newBill) {
         super(newBill);
     }
    
     @Override
     public String getBill(){
-        return tempBill.getBill() + price + "\n ______________________________ \n";
+        return tempBill.getBill() + "______________________________\nTotal = " + data.getPrice() + "€\n";
       
     }   
 }

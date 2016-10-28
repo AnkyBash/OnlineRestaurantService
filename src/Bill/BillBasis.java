@@ -9,18 +9,15 @@ package Bill;
  *
  * @author Ih
  */
-
-public class RestaurantAdress extends BillDecorator {
-
-    public RestaurantAdress(Bill newBill) {
-        super(newBill);
-    }
+public class BillBasis implements Bill {
     
     @Override
     public String getBill(){
-        return tempBill.getBill() + data.getRestaurantAdress() + "\n";
-    }  
+        return "–––––––––––––––––––––\nBill:\n–––––––––––––––––––––\n";
+    }
+    @Override
+    public BillData getData(){
+        return data;
+    }
+    
 }
- 
-   
- 

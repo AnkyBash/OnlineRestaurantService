@@ -7,6 +7,7 @@ package Organisation;
 
 import Bill.Observer;
 import Restaurant.Dish;
+import Restaurant.Restaurant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +15,49 @@ import java.util.List;
  *
  * @author Jo
  */
-public class Order implements Subject {
+public class Order implements Subject, OrderInterface, OriginatorMemento {
 
     private List<Observer> observers = new ArrayList<Observer>();
     private List<Dish> dishList = new ArrayList<Dish>();
+    Restaurant restaurant;
+    
+    void setRestaurant(Restaurant r){
+        restaurant = r;
+    }
+    
+    
+    //Classes to keep the Bill updated
+    @Override
+    public double getTotalPrice(){
+        double price = 0;
+        for (int i = 0; i < dishList.size();i++){
+            price = price + dishList.get(i).getDishPrice();
+        }
+        return price;
+    }
+    @Override
+    public String getRestaurantName(){
+        if (restaurant != null)
+            return restaurant.getRestaurantName();
+        else
+            return "No Restaurant Chosen";
+    }
+    @Override
+    public String getRestaurantAdress(){
+        if (restaurant != null)
+            return restaurant.getLocation();
+        else
+            return "No Adress Chosen";
+    }
+    @Override
+    public String getDishes(){
+        String dishes = "\n";
+        for (int i = 0; i < dishList.size();i++){
+            dishes = dishes + dishList.get(i).getDishName() + "......" + dishList.get(i).getDishPrice() + "€\n";
+        } 
+        return dishes;
+    }
+    
     
     @Override
     public void addDishToOrder(Dish dishToAdd) {
@@ -45,6 +85,22 @@ public class Order implements Subject {
         for (Observer obs : observers) {
             obs.update();
         }
+    }
+    
+    
+    // Memento:
+    // getDishList and addDishToOrder implement getState() and setState() of the
+    // Memento Pattern
+    // dishList represents the state
+    
+    @Override
+    public Memento saveListToMomento() {
+        return new Memento(dishList);        
+    }
+    
+    @Override
+    public void restoreListFromMomento(Memento memento) {
+        dishList = memento.getList();
     }
     
 }

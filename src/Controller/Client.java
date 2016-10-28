@@ -42,7 +42,7 @@ public class Client {
        // agent.takeCommand(chooseRestoCommand);
         //placing command
         agent.placeCommand();
-        
+       
         System.exit(0);
     }
     

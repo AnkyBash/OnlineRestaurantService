@@ -3,12 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Restaurant;
+package Organisation;
 
 /**
  *
- * @author Ih
+ * @author Jo
  */
-public enum DishType {
-     DRINK, FOOD, DESSERT, FOOD_VEGAN, DESSERT_VEGAN, FOOD_VEGETERIAN
+public interface OriginatorMemento {
+    
+    public Memento saveListToMomento();
+    
+    public void restoreListFromMomento(Memento memento);
+    
+  
 }

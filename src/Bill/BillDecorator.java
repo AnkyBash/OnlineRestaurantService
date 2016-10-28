@@ -14,17 +14,11 @@ import java.util.List;
  */
 //import java.util.ArrayList;
 
-abstract public class BillDecorator implements BillInterface, Observer {
-    double price = 0.0;
-    List <String> orderedDishes;
-    String restaurantName = "No Restaurant Chosen";
-    String restaurantAdress = "No Adress Chosen";
+abstract public class BillDecorator implements Bill {
     
-    
-    
-    protected BillInterface tempBill;
+    protected Bill tempBill;
 
-    public BillDecorator(BillInterface newBill){
+    public BillDecorator(Bill newBill){
         tempBill = newBill;
     }
   
@@ -33,18 +27,8 @@ abstract public class BillDecorator implements BillInterface, Observer {
         return tempBill.getBill();
     }
     
-    //for observer: 
-    Subject observerSubject;
-    
     @Override
-    public void update() {
-        System.out.println("The Order has been updated: Show list of dishes");
-    }
-    
-
-    @Override
-    public void setSubject(Subject sub) {
-        observerSubject = sub;
-        observerSubject.register(this);
+    public BillData getData(){
+        return data;
     }
 }
