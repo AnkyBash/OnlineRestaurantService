@@ -10,6 +10,10 @@ package Controller;
  * @author ankit
  */
 public interface Command {
+    
+    //Execute Method
     public void execute();
+    
+    //undo method
     public void undo();
 }
