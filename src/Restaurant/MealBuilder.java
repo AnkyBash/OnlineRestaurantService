@@ -5,7 +5,6 @@
  */
 package Restaurant;
 
-import java.util.ArrayList;
 
 /**
  *
@@ -15,7 +14,6 @@ public class MealBuilder {
     
     private Meal meal; // declare Meal variable
     NutritionForm form; // declare nutritionform variable.
-     private ArrayList<Meal> myPreferences = new ArrayList<>(); // arrayList to collate different type of Meals
     
     //Method to create American dish type
     public Meal americanTaste (){
@@ -42,7 +40,7 @@ public class MealBuilder {
    public Meal medittereanTaste (){
        System.out.println("You chose Meditterean Meal");
       meal = new Meal();
-      meal.addItem(new Food("Potatoes", 5, form));
+      meal.addItem(new Food("Potatoes", 5, form)); // create a mediterrean meal type as specify
       meal.addItem(new Drink("Fanta", 3, form));
       meal.addItem(new Dessert("SweetEgg", 1.20, form));
       return meal;
@@ -54,8 +52,7 @@ public class MealBuilder {
       meal = new Meal();
       meal.addItem(new Food("Rice", 8, form));
       meal.addItem(new Drink("Palm Wine", 10, form));
-      meal.addItem(new Dessert("SweetCakeAfrican", 5, form));
-       System.out.println("You chose African Meal");
+      meal.addItem(new Dessert("SweetCakeAfrican", 5, form)); // create a dessert specify
       return meal;
    }
 

@@ -47,18 +47,16 @@ public class ShowRestaurantListCmd implements Command
       }
       
       System.out.println();   
+      // testing the progress on creating Meal; though not yet finish
       Restaurant mine = new Restaurant();
       ArrayList<String> str = new ArrayList<>();
       String myPick = mine.view();
       str.add(myPick);
       System.out.println();
       System.out.print("Please Choose Meal Type(0-4) : ");
-      int selectedMeal = scanner.nextInt();
       System.out.println();
      
       for(int i = 0; i <mine.countList(i); i++){
-      String Pick = mine.view();
-      str.add(Pick);
            System.out.print("You have selected "+ str.get(i));
       }
     }

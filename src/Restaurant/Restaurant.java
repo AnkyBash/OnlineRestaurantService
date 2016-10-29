@@ -19,9 +19,7 @@ public class Restaurant
 {
     private String restaurantName;
     private String location;
-    private ArrayList<Meal> myPreferences = new ArrayList<>(); // arrayList to collate different type of Meals
     private MealBuilder aMeal;
-      private MealBuilder n;
     
    //constructor method for restaurant
     public Restaurant(String restaurantName, String location)
@@ -83,10 +81,10 @@ public class Restaurant
         int i=0;
         ArrayList<String> checkMe = new ArrayList<>();
         String arrayView =""; // a variable to store the array dashboard;
-        checkMe.add(0,getAfricanMeal()); //add African meal builder
-        checkMe.add(1,getAmericanMeal()); 
-        checkMe.add(2,getEuropeanMeal());
-        checkMe.add(3,getMedittereanMeal());
+        checkMe.add(getAfricanMeal()); //add African meal builder
+        checkMe.add(getAmericanMeal()); 
+        checkMe.add(getEuropeanMeal());
+        checkMe.add(getMedittereanMeal());
    
         // forloop to display
         for(String s : checkMe){
