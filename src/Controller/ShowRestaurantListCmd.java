@@ -5,6 +5,8 @@
  */
 package Controller;
 import Organisation.Organisation;
+import Restaurant.Meal;
+import Restaurant.MealBuilder;
 import Restaurant.Restaurant;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.Scanner;
 public class ShowRestaurantListCmd implements Command
 {
     private Organisation organisation;
-
+    
     public ShowRestaurantListCmd(Organisation org)
     {
       this.organisation = org;
@@ -42,6 +44,22 @@ public class ShowRestaurantListCmd implements Command
       {
        if(selectedRestaurant == i)
        {System.out.println("Welcome ! You selected "+restaurantList.get(i).getRestaurantName());}
+      }
+      
+      System.out.println();   
+      Restaurant mine = new Restaurant();
+      ArrayList<String> str = new ArrayList<>();
+      String myPick = mine.view();
+      str.add(myPick);
+      System.out.println();
+      System.out.print("Please Choose Meal Type(0-4) : ");
+      int selectedMeal = scanner.nextInt();
+      System.out.println();
+     
+      for(int i = 0; i <mine.countList(i); i++){
+      String Pick = mine.view();
+      str.add(Pick);
+           System.out.print("You have selected "+ str.get(i));
       }
     }
    
