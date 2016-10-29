@@ -16,8 +16,8 @@ public class MealBuilder {
     NutritionForm form; // declare nutritionform variable.
     
     //Method to create American dish type
-    public Meal americanTaste (){
-        System.out.println("You chose American Meal");
+    public Meal americanTaste(){
+        System.out.println("Creating American Meal.... ");
       meal = new Meal();
       meal.addItem(new Food("HotDog", 8, form)); //add a type of American food
       meal.addItem( new Drink("Pepsi", 3, form)); // add a type of American taste
@@ -26,8 +26,8 @@ public class MealBuilder {
    }   
 
     //Method to create European dish type
-   public Meal europeanTaste (){
-       System.out.println("You chose European Meal");
+   public Meal europeanTaste(){
+       System.out.println("Creating European Meal....");
       meal = new Meal();
       meal.addItem( new Food("NiceSalad", 6, form));
       meal.addItem( new Drink("Coke", 2, form));
@@ -37,8 +37,8 @@ public class MealBuilder {
    }
    
    //Method to create Meditterean dish type
-   public Meal medittereanTaste (){
-       System.out.println("You chose Meditterean Meal");
+   public Meal medittereanTaste(){
+       System.out.println("Creating Meditterean Meal....");
       meal = new Meal();
       meal.addItem(new Food("Potatoes", 5, form)); // create a mediterrean meal type as specify
       meal.addItem(new Drink("Fanta", 3, form));
@@ -47,8 +47,8 @@ public class MealBuilder {
    }
    
    //Method to create African dish type
-   public Meal africanTaste (){
-       System.out.println("You chose African Meal");
+   public Meal africanTaste(){
+       System.out.println("Creating African Meal... ");
       meal = new Meal();
       meal.addItem(new Food("Rice", 8, form));
       meal.addItem(new Drink("Palm Wine", 10, form));

@@ -25,7 +25,7 @@ public class Meal {
    }
 
    //method get cost for the complete Meal pack choosen
-   public double getCost(){    
+   public double getDishPrice(){    
       for (Dish item : choosenMeals) {
          cost += item.getDishPrice();
       }		

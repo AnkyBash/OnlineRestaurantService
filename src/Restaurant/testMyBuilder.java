@@ -16,14 +16,14 @@ public class testMyBuilder {
         MealBuilder mealBuilder = new MealBuilder();
         
       Meal americanMeal = mealBuilder.americanTaste();
-      americanMeal.showItems();
-      System.out.println("Total Cost: " + americanMeal.getCost());
+      americanMeal.showItems(); // display the meal created
+      System.out.println("Total Cost: " + americanMeal.getDishPrice());
       
       System.out.println();
       
       Meal africanMeal = mealBuilder.africanTaste();
       africanMeal.showItems();
-      System.out.println("Total Cost: " + africanMeal.getCost());
+      System.out.println("Total Cost: " + africanMeal.getDishPrice());
     }
     
 }
