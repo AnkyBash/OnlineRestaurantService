@@ -5,21 +5,27 @@
  */
 package Controller;
 
+import java.util.Scanner;
+import Organisation.Organisation;
+import Restaurant.Restaurant;
+import java.util.List;
 /**
  *
  * @author ankit
  */
 public class ShowMenuCommand implements Command
 {
-    public ShowMenuCommand()
-    {
+    Restaurant restaurant;
     
+    public ShowMenuCommand(Restaurant restaurant)
+    {
+     this.restaurant = restaurant;
     }
     
     @Override 
     public void execute()
     {
-      System.out.println("Show Menu Executing");
+      System.out.println("\nShow Menu Command Executing ..");
     }
     
     @Override

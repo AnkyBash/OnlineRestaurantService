@@ -25,24 +25,17 @@ public class ShowRestaurantListCmd implements Command
     @Override
     public void execute() 
     {
+      System.out.println("\nAvailable Restaurants are: ");
+      
+      //getting a list of restaurant from database
       List<Restaurant> restaurantList = organisation.getRestaurantList();
       
+      //loop through to print the restaurant list
       for(int i = 0; i < restaurantList.size(); i++)
       {
        System.out.println(i+" "+restaurantList.get(i).getRestaurantName() + "   " + restaurantList.get(i).getLocation());
       }
       
-      Scanner scanner = new Scanner(System.in);
-     
-      System.out.print("Please Choose Restaurant(0-n) : ");
-      int selectedRestaurant = scanner.nextInt();
-      System.out.println();
-      
-      for(int i = 0; i < restaurantList.size(); i++)
-      {
-       if(selectedRestaurant == i)
-       {System.out.println("Welcome ! You selected "+restaurantList.get(i).getRestaurantName());}
-      }
     }
    
     @Override

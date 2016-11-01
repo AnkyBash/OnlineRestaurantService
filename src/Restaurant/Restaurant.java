@@ -4,10 +4,6 @@
  * and open the template in the editor.
  */
 package Restaurant;
-import java.util.List;
-
-import java.sql.Time;
-import java.util.List;
 
 /**
  *

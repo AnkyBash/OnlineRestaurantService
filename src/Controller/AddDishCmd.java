@@ -4,23 +4,28 @@
  * and open the template in the editor.
  */
 package Controller;
-
+import Organisation.Order;
+import Restaurant.Dish;
 /**
  *
  * @author ankit
  */
 public class AddDishCmd implements Command
 {
+    Order order;
+    Dish dish;
     
-    public AddDishCmd()
+    public AddDishCmd(Order order, Dish dish)
     {
-    
+     this.order = order;
+     this.dish = dish;
     }
     
     @Override 
     public void execute()
     {
-      System.out.println("Add Dish Executing");
+      System.out.println("\nAdd Dish Command : "+ dish.getDishName());
+      order.addDishToOrder(dish);
     }
     
     @Override

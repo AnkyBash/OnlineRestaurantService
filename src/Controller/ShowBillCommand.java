@@ -4,29 +4,29 @@
  * and open the template in the editor.
  */
 package Controller;
-import Organisation.Order;
+import Bill.Bill;
 /**
  *
  * @author ankit
  */
-public class ConfirmOrderCmd implements Command
+public class ShowBillCommand implements Command 
 {
-    Order order;
+    Bill bill;
     
-    public ConfirmOrderCmd(Order order)
+     public ShowBillCommand(Bill bill)
     {
-     this.order = order;
+     this.bill = bill;
     }
     
     @Override 
     public void execute()
     {
-      System.out.println("Your Order Confirmed. Thanks for the Order");
+      System.out.println(bill.getBill());
     }
     
     @Override
     public void undo()
     {
-     System.out.println("Undo in Confirm Order Command");
-    }
+     System.out.println("Undo in AddDish Command");
+    }    
 }
