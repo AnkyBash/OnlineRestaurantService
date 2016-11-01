@@ -38,6 +38,22 @@ public class ShowRestaurantListCmd implements Command
        System.out.println(i+" "+restaurantList.get(i).getRestaurantName() + "   " + restaurantList.get(i).getLocation());
       }
       
+      Scanner scanner = new Scanner(System.in);
+     
+      System.out.print("Please Choose Restaurant(0-n) : ");
+      int selectedRestaurant = scanner.nextInt();
+      System.out.println();
+      
+      for(int i = 0; i < restaurantList.size(); i++)
+      {
+       if(selectedRestaurant == i)
+       {System.out.println("Welcome ! You selected "+restaurantList.get(i).getRestaurantName());}
+      }
+      
+      System.out.println();   
+      
+      Restaurant mine = new Restaurant(); // instantiate an instance of Restaurant
+       mine.view(); // display the list of Meal that can be created
     }
    
     @Override
